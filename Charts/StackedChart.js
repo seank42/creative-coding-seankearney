@@ -27,9 +27,10 @@ constructor(
       this.thevalueY = _thevalueY;
       this.valueS = _valueS;
       this.valuet = _valuet;
-      this.MaximumNo = this.calMax();
+      this.maximumNo = this.calMax();
       this.bMarge = _bMarge;
       this.space = _space;
+     
   }
 
   render() {
@@ -73,6 +74,33 @@ constructor(
     }
  
     pop();
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// heres my attepts of a proper stacked chart but it doesnt work ////////////////////////////////////////////////////
+
+// let numberofbars = this.data.getRowCount();
+// let remainingWidth = this.barChartWidth - (this.bMarge * 2) - (numberofbars - 1) * this.space;
+// let barwidth = remainingWidth / numberofbars;
+// let spaceofBar = this.barChartWidth + this.space;
+
+// translate(this.bMarge, 0);
+
+// for(let x = 0; x < numberofbars; x++){
+// push()
+// translate(x* spaceofBar,0)
+
+// push()
+// for (let y = 0; y < this.value.length; y++){
+// let value = int(this.data.rows[x].obj[this.value[y]]);
+// fill(225,71,19)
+// stroke(0)
+// rect(0,0,barwidth,this.scaleUp(-value));
+// translate(0,this.scaleUp(-value))
+// }
+// pop()
+
+// pop()
+// }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   }
 
   // draws the horizontal line
@@ -121,7 +149,7 @@ constructor(
       fill(50);
       line(this.barChartWidth, -spaceY * y, -10, -spaceY * y);
 
-      let spaceUnit = (this.MaximumNo / this.NumberofTicks).toFixed(2);
+      let spaceUnit = (this.maximumNo / this.NumberofTicks).toFixed(2);
       noStroke();
       fill(50);
       textSize(12);
@@ -152,6 +180,6 @@ constructor(
   // map function, this makes it so the bars will scale up to any parameter I set such as the excel sheet
   // in data folder
   scaleUp(_no) {
-    return map(_no, 0, this.MaximumNo, 0, this.barChartHeight);
+    return map(_no, 0, this.maximumNo, 0, this.barChartHeight);
   }
 }

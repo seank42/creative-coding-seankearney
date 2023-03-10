@@ -85,13 +85,9 @@ class BarChart {
     textAlign(CENTER)
     fill(199,34,34)
     textSize(30)               
-<<<<<<< HEAD
     textStyle(ITALIC);
     text("Marriages Registered in 2020",this.barChartWidth/2,-this.barChartHeight-60)
    
-=======
-    text(" Hospital Admissions",this.barChartWidth/2,-this.barChartHeight-50)
->>>>>>> ac5c161bd6bf244eddfc6da6c269b60d2846dbed
   }
 
   // draws the vertical line
@@ -101,14 +97,8 @@ class BarChart {
       let spaceY = this.barChartHeight / this.NumberofTicks;
 
       stroke(50);
-<<<<<<< HEAD
       line(0, -spaceY * y, -10, -spaceY * y);
       let spaceUnit = (this.MaximumNo / this.NumberofTicks).toFixed(2);
-=======
-      fill(50);
-      line(this.barChartWidth, -spaceY * y, -10, -spaceY * y);
-      let spaceUnit = (this.MaximumNo / this.noTicks).toFixed(2);
->>>>>>> ac5c161bd6bf244eddfc6da6c269b60d2846dbed
       noStroke();
       fill(50);
       textSize(12);

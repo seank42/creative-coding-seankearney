@@ -78,7 +78,7 @@ function setup() {
       _posY:400,
       _title:"Difficulties",
       _data:table04,
-      _NumberofTicks:10,
+      _NumberofTicks:7,
       _roundUp:1,
       _bMarge:10,
       _space:5,
@@ -111,6 +111,7 @@ function setup() {
 
 // draws out the charts
 function draw() {
+  background(255);
   chart[0].render();
   chart[1].render();
   chart[2].render();
